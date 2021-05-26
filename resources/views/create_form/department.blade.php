@@ -7,10 +7,11 @@
 <div class="card bg-warning" style="width:100%;">
     <div class="card-body">
         <h5 class="card-title">Add Department</h5><hr>
-        <form class="row g-3">
+        <form method="post" action="/create_form/department" class="row g-3">
+          @csrf
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Department</label>
-                <input type="text" class="form-control" id="inputEmail4">
+                <label for="department" class="form-label">Department</label>
+                <input type="text" class="form-control" id="department" name="department" required>
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Save</button>

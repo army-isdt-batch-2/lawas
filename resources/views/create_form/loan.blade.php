@@ -7,37 +7,38 @@
 <div class="card bg-warning" style="width:100%;">
     <div class="card-body">
         <h5 class="card-title">Apply Loan</h5><hr>
-        <form class="row g-3">
+        <form method="post" action="/create_form/loan" class="row g-3">
+          @csrf
             <div class="col-4">
-                <label for="">Employee ID</label>
-                <input type="text" class="form-control">
+                <label for="employee_id">Employee ID</label>
+                <input name="employee_id" id="employee_id" type="text" class="form-control" required>
             </div>
             <div class="col-4">
-                <label for="">Full Name</label>
-                <input type="text" class="form-control">
+                <label for="full_name">Full Name</label>
+                <input name="full_name" id="full_name" type="text" class="form-control" required>
             </div>
             <div class="col-4">
-                <label for="">Designation</label>
-                <input type="text" class="form-control">
+                <label for="designation">Designation</label>
+                <input name="designation" id="designation" type="text" class="form-control" required>
             </div>
 
             <div class="col-md-4">
-                <label for="">Loan Type</label>
-                <select id="inputState" class="form-select">
+                <label for="loan_type">Loan Type</label>
+                <select name="loan_type" id="loan_type" class="form-select" required>
                     <option selected>Choose...</option>
                     <option>...</option>
                     <option>A</option>
                     <option>B</option>
                     <option>C</option>
                 </select>
-                <label for="">Loan Amount</label>
-                <input type="number" class="form-control">
-                <label for="">Months Payable</label>
-                <input type="number" class="form-control">
+                <label for="amount">Loan Amount</label>
+                <input name="amount" id="amount" type="number" class="form-control" required>
+                <label for="months_payable">Months Payable</label>
+                <input name="months_payable" id="months_payable" type="number" class="form-control" required>
             </div>
             <div class="col-md-8">
-                <textarea name="" id="" cols="30" rows="7" class="form-control"></textarea>
-            </div>    
+                <textarea name="note" id="note" cols="30" rows="7" class="form-control" required></textarea>
+            </div>
             <hr>
             <div class="col-12 d-grid gap-2">
                 <button class="btn btn-dark text-warning">Apply</button>

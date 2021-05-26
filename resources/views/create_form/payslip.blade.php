@@ -7,19 +7,20 @@
 <div class="card bg-warning" style="width:100%;">
     <div class="card-body">
         <h5 class="card-title">Prcess Payroll</h5><hr>
-        <form class="row g-3">
+        <form method="post" action="/create_form/payslip" class="row g-3">
+          @csrf
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Cut-off Start</label>
-                <input type="date" class="form-control" id="inputEmail4">
+                <label for="cutoffstart" class="form-label">Cut-off Start</label>
+                <input type="date" class="form-control" id="cutoffstart" name="cutoffstart" required>
             </div>
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Cut-off End</label>
-                <input type="date" class="form-control" id="inputEmail4">
+                <label for="cutoffend" class="form-label">Cut-off End</label>
+                <input type="date" class="form-control" id="cutoffend" name="cutoffend" required>
             </div>
             <hr>
             <div class="col-12 d-grid gap-2">
                 <button type="submit" class="btn btn-dark text-warning">Save</button>
-            </div>  
+            </div>
         </form>
     </div>
 </div>
